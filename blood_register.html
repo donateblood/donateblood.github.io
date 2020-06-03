@@ -13,7 +13,8 @@
 	<script type="text/javascript" src="js/exam.js"></script>
 
 
-	<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+	<script  src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-database.js"></script>
 
 
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -178,21 +179,24 @@ function showPosition(position) {
 
 
 
-
-
-	var config = {
-		apiKey: "AIzaSyCvLRwJ4PNd4joJKBjbe8458QLGuey1qYg",
-		authDomain: "techmsrit1.firebaseapp.com",
-		databaseURL: "https://techmsrit1.firebaseio.com",
-		projectId: "techmsrit1",
-		storageBucket: "techmsrit1.appspot.com",
-		messagingSenderId: "193681871061"
-	};
+var config =  {
+    apiKey: "AIzaSyCvLRwJ4PNd4joJKBjbe8458QLGuey1qYg",
+    authDomain: "techmsrit1.firebaseapp.com",
+    databaseURL: "https://techmsrit1.firebaseio.com",
+    projectId: "techmsrit1",
+    storageBucket: "techmsrit1.appspot.com",
+    messagingSenderId: "193681871061",
+    appId: "1:193681871061:web:1fd8cc700e9cb93992525c"
+  };
 	firebase.initializeApp(config);
 
-	var ref = firebase.database().ref("donors/");
+	
 
 	function putinfo(){
+
+		
+
+	var ref = firebase.database().ref("donors/");
 
 		var name = document.getElementById('a1').value;
 		var blood = document.getElementById('a2').value;
